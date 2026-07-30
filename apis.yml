@@ -1,23 +1,83 @@
 aid: lattice-health
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/lattice-health.png
 name: Lattice Health
-description: Lattice Health is a company surfaced as a portfolio company of y-combinator and added to
-  the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: 'Lattice Health is a Y Combinator (Spring 2026) healthcare company building AI governance
+  as a managed service for hospitals. The platform sits beside an existing clinical stack and taps the
+  HL7 and DICOM signals that deployed imaging and clinical AI models already emit, with no rip-and-replace
+  integration, then continuously measures population drift (PSI), subgroup fairness disparity under HHS
+  Section 1557, latency against target, and silent vendor model-update detection across every vendor
+  model running in production. Rather than another dashboard, Lattice delivers a per-role signed PDF
+  report each morning to IT directors, CMIO/CIO, and compliance officers, cryptographically signed with
+  the institution''s own signing key so any recipient, including outside counsel or a regulator, can
+  verify the artifact offline with standard open-source tooling and no Lattice account or infrastructure.
+  Radiologist thumbs-up/thumbs-down feedback on AI results is aggregated at model level and folded into
+  the next morning''s findings. The company positions itself around standards alignment (IHE UPS-RS work-list
+  status, AI-Results and ERA classification, ONC HTI-1, FDA Predetermined Change Control Plan envelopes
+  with automatic breach detection) and HIPAA-safe egress with a strict-mode PHI redactor, deployed on-premise
+  or in the customer''s private cloud so PHI stays behind the hospital firewall. As of this profile Lattice
+  Health publishes no public developer portal, API documentation, machine-readable API specification,
+  SDKs, or pricing; it is a pre-public-API company tracked here as an AI governance and clinical AI oversight
+  lead.'
 url: https://raw.githubusercontent.com/api-evangelist/lattice-health/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - y-combinator
 x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier-reason: no-public-api
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Healthcare
+- Health IT
+- Artificial Intelligence
+- AI Governance
+- Clinical AI
+- Medical Imaging
+- Radiology
+- DICOM
+- HL7
+- Compliance
+- Monitoring
+- Observability
 apis: []
+common:
+- type: Website
+  url: https://www.latticehealthai.com/
+- type: Contact
+  url: mailto:christine@latticehealthai.com
+- type: VentureCapital
+  url: https://www.ycombinator.com/companies/lattice-health
+  name: Y Combinator company profile (Spring 2026)
+- type: DomainSecurity
+  url: security/lattice-health-domain-security.yml
+- type: WellKnownProbe
+  url: well-known/lattice-health-well-known.yml
+  name: Well-known discovery probe (no documents published)
+- type: Conformance
+  url: conformance/lattice-health-conformance.yml
+- type: LLMsTxt
+  url: llms/lattice-health-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
