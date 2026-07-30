@@ -1,0 +1,56 @@
+# Lattice Health
+
+> AI governance as a managed service for hospitals. Lattice Health monitors every clinical
+> AI model running in a hospital across vendors, tapping the HL7 and DICOM signals those
+> models already emit, and delivers a per-role cryptographically signed PDF report each
+> morning covering drift (PSI), subgroup fairness disparity, safety posture, latency,
+> silent vendor model-update detection, and aggregated radiologist feedback. Reports are
+> signed with the institution's own key and verify offline with standard open-source
+> tooling, with no Lattice account or infrastructure required. Y Combinator Spring 2026,
+> San Francisco.
+
+## Status of the developer surface
+
+As of 2026-07-19 Lattice Health publishes NO public API, developer portal, API reference,
+machine-readable specification (OpenAPI/AsyncAPI/GraphQL), SDKs, CLI, sandbox, changelog,
+status page, pricing page, terms of service, or privacy policy. The product is delivered
+as an on-premise / private-cloud managed service with signed PDF and evidence-packet
+outputs rather than a public developer API. Do not assume an API endpoint exists; there
+is no documented base URL. Contact the company directly to discuss integration.
+
+## Company
+
+- [Lattice Health](https://www.latticehealthai.com/): Marketing site and the only public
+  surface. Sections: the problem, the report, how it works, standards, security, pilot request.
+- [Y Combinator profile](https://www.ycombinator.com/companies/lattice-health): Spring 2026
+  batch, Healthcare / Healthcare IT, San Francisco.
+- Contact: christine@latticehealthai.com (Christine Park, founder/CEO)
+
+## What the platform does
+
+- Ingest: taps existing HL7 and DICOM feeds from deployed vendor AI models, no rip-and-replace.
+- Measure: continuous population stability index (PSI) drift, subgroup fairness disparity,
+  latency p95 against target, and statistical silent-update detection on confidence distributions.
+- Report: per-role signed PDFs (IT Director, CMIO/CIO, Compliance Officer) delivered by email;
+  a missed day is an SLA event.
+- Prove: chain-of-custody evidence packets, transparency-log anchored, for decisions later
+  under regulatory or legal scrutiny.
+- Feedback: one-click radiologist thumbs-up/thumbs-down on AI results, aggregated at model
+  level only so individual labor data stays private.
+
+## Standards alignment (vendor claims, not third-party certifications)
+
+- IHE-aligned: UPS-RS work-list status, AI-Results, ERA classification
+- DICOM and HL7 signal ingest
+- HIPAA-safe egress: PHI redactor, strict-mode default, batch-blocking failure
+- HHS Section 1557 subgroup fairness disparity reporting
+- FDA Predetermined Change Control Plan (PCCP) envelope status with breach detection
+- ONC HTI-1, ACR ARCH-AI, ACR Assess-AI continuous posture
+- Air-gap friendly: no external API required for the core workflow
+
+## API Evangelist artifacts
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/lattice-health/refs/heads/main/apis.yml): APIs.json profile
+- [conformance/lattice-health-conformance.yml](https://raw.githubusercontent.com/api-evangelist/lattice-health/refs/heads/main/conformance/lattice-health-conformance.yml): standards claims with evidence
+- [security/lattice-health-domain-security.yml](https://raw.githubusercontent.com/api-evangelist/lattice-health/refs/heads/main/security/lattice-health-domain-security.yml): TLS/HSTS/DNS posture probe
+- [well-known/lattice-health-well-known.yml](https://raw.githubusercontent.com/api-evangelist/lattice-health/refs/heads/main/well-known/lattice-health-well-known.yml): well-known discovery probe (all 404)

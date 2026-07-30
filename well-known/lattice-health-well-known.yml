@@ -1,0 +1,38 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of https://www.latticehealthai.com/.well-known/*
+host: https://www.latticehealthai.com
+result: none-published
+note: Every well-known discovery path returned 404. Lattice Health publishes no security.txt,
+  no OIDC/OAuth discovery document, no API catalog, and no ai-plugin manifest. /robots.txt,
+  /sitemap.xml and /llms.txt are also absent. This is recorded as a negative probe result,
+  not a catalog - no WellKnown or APICatalog rating pointer is claimed.
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+other_paths:
+- path: /robots.txt
+  status: 404
+- path: /sitemap.xml
+  status: 404
+- path: /llms.txt
+  status: 404
+subdomains_probed:
+- host: docs.latticehealthai.com
+  status: no-resolve
+- host: api.latticehealthai.com
+  status: no-resolve
+- host: developers.latticehealthai.com
+  status: no-resolve
+- host: status.latticehealthai.com
+  status: no-resolve
+- host: trust.latticehealthai.com
+  status: no-resolve

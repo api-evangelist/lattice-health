@@ -1,0 +1,66 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.latticehealthai.com/ (Standards and Security by design sections)
+note: These are the standards-alignment claims Lattice Health publishes on its own marketing
+  site. They are vendor claims, not third-party certifications or audit attestations - the
+  company publishes no trust center, no SOC 2 / ISO 27001 report, and no compliance program
+  page. No Compliance rating pointer is claimed on this evidence. There is no public API
+  specification, so none of these standards could be verified against a machine-readable
+  contract.
+standards:
+- id: ihe-ups-rs
+  name: IHE UPS-RS work-list status
+  conforms: claimed
+  evidence: 'Site: "IHE-aligned - UPS-RS work-list status, AI-Results, and ERA classification,
+    predictable shapes for PACS and EHR teams."'
+- id: ihe-ai-results
+  name: IHE AI-Results / ERA classification
+  conforms: claimed
+  evidence: 'Site: IHE-aligned section lists AI-Results and ERA classification.'
+- id: dicom
+  name: DICOM
+  conforms: claimed
+  evidence: 'Site: "Tap existing feeds - HL7 and DICOM signals from the models you already run."'
+- id: hl7
+  name: HL7
+  conforms: claimed
+  evidence: 'Site: ingest step taps existing HL7 feeds.'
+- id: hipaa
+  name: HIPAA
+  conforms: claimed
+  evidence: 'Site: "HIPAA-safe egress - PHI redactor with strict-mode default; a loud failure
+    blocks the entire batch before anything leaves the wire." On-prem/private-cloud deployment
+    keeps PHI behind the customer firewall. No BAA or HIPAA attestation is published.'
+- id: hhs-section-1557
+  name: HHS Section 1557 nondiscrimination
+  conforms: claimed
+  evidence: 'Site: "Subgroup fairness: HHS 1557 disparity" reported in the CMIO/CIO report section.'
+- id: fda-pccp
+  name: FDA Predetermined Change Control Plan (PCCP)
+  conforms: claimed
+  evidence: 'Site: "FDA PCCP envelope status + breach detection" in the Compliance Officer
+    report section.'
+- id: onc-hti-1
+  name: ONC HTI-1 algorithm transparency
+  conforms: claimed
+  evidence: 'Site: "Continuous posture: ARCH-AI, Assess-AI, ONC HTI-1."'
+- id: acr-arch-ai
+  name: ACR ARCH-AI registry
+  conforms: claimed
+  evidence: 'Site: Compliance Officer continuous-posture list includes ARCH-AI.'
+- id: acr-assess-ai
+  name: ACR Assess-AI registry
+  conforms: claimed
+  evidence: 'Site: Compliance Officer continuous-posture list includes Assess-AI.'
+- id: oauth2
+  conforms: false
+  evidence: no public API or securityScheme published
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: no public API specification published
+- id: soc2
+  conforms: false
+  evidence: no trust center or audit report published
+- id: iso-27001
+  conforms: false
+  evidence: no trust center or audit report published
