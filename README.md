@@ -64,22 +64,79 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-AI governance as a managed service for hospitals. Lattice Health monitors every clinical AI model running across vendors in a hospital by tapping the HL7 and DICOM signals those models already emit, then delivers a per-role cryptographically signed PDF report each morning covering drift (PSI), subgroup fairness disparity, safety posture, latency, silent vendor model-update detection, and aggregated radiologist feedback. Reports are signed with the institution's own key and verify offline with standard open-source tooling.
+Lattice Health is a Y Combinator (Spring 2026) healthcare company building AI governance as a managed service for hospitals. The platform sits beside an existing clinical stack and taps the HL7 and DICOM signals that deployed imaging and clinical AI models already emit, with no rip-and-replace integration, then continuously measures population drift (PSI), subgroup fairness disparity under HHS Section 1557, latency against target, and silent vendor model-update detection across every vendor model running in production. Rather than another dashboard, Lattice delivers a per-role signed PDF report each morning to IT directors, CMIO/CIO, and compliance officers, cryptographically signed with the institution's own signing key so any recipient, including outside counsel or a regulator, can verify the artifact offline with standard open-source tooling and no Lattice account or infrastructure. Radiologist thumbs-up/thumbs-down feedback on AI results is aggregated at model level and folded into the next morning's findings. The company positions itself around standards alignment (IHE UPS-RS work-list status, AI-Results and ERA classification, ONC HTI-1, FDA Predetermined Change Control Plan envelopes with automatic breach detection) and HIPAA-safe egress with a strict-mode PHI redactor, deployed on-premise or in the customer's private cloud so PHI stays behind the hospital firewall. As of this profile Lattice Health publishes no public developer portal, API documentation, machine-readable API specification, SDKs, or pricing; it is a pre-public-API company tracked here as an AI governance and clinical AI oversight lead.
 
-- Website: https://www.latticehealthai.com/
-- Y Combinator: https://www.ycombinator.com/companies/lattice-health (Spring 2026, San Francisco)
-- Backed by: y-combinator
+**Areas:** Company · Healthcare · Health IT · Artificial Intelligence · AI Governance · Clinical AI · Medical Imaging · Radiology · DICOM · HL7 · Compliance · Monitoring
 
-## Developer surface
+## Lattice Health on APIs.io
 
-As of 2026-07-19 Lattice Health publishes **no public API**, developer portal, API reference, machine-readable specification, SDKs, CLI, sandbox, changelog, status page, or pricing. The product ships as an on-premise / private-cloud managed service with signed PDF and evidence-packet outputs. This repo therefore carries identity, conformance, and security-posture artifacts only.
+Everything profiled for Lattice Health is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/lattice-health/](https://apis.io/providers/lattice-health/)** — or go straight to one of the APIs or properties below.
 
-## Artifacts
+### Published properties
 
-| Artifact | File |
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Lattice Health Domain Security](https://apis.io/security/lattice-health/lattice-health-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.latticehealthai.com/)
+
+## API Evangelist rating
+
+**Kin Score 4.9** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
 |---|---|
-| APIs.json profile | `apis.yml` |
-| Standards conformance (vendor claims) | `conformance/lattice-health-conformance.yml` |
-| Domain security posture (probed) | `security/lattice-health-domain-security.yml` |
-| Well-known discovery probe (all 404) | `well-known/lattice-health-well-known.yml` |
-| llms.txt | `llms/lattice-health-llms.txt` |
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 8.1** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/lattice-health/](https://apis.io/providers/lattice-health/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Lattice Health: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/lattice-health/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
